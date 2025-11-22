@@ -1,6 +1,6 @@
-﻿
 
 
+'By Prithiv 10E
 Imports System.Text.Json
 
 
@@ -139,6 +139,7 @@ Module Program
                     End If
             End Select
         End While
+        'By Prithiv 10E
 
 
         Return validChoices(selection - 1).NextScene
@@ -250,6 +251,7 @@ Module Program
             Scene = ""
         End Sub
         Function BuildFunction() As Func(Of States, Boolean)
+            'By Prithiv 10E
 
             If All IsNot Nothing AndAlso All.Count > 0 Then
                 Dim funcs = All.Select(Function(c) c.BuildFunction()).ToList()
@@ -373,6 +375,8 @@ Module Program
                 state.states(p.Key)(0) = value.ToString()
             End If
         Next
+        'By Prithiv 10E
+
     End Sub
     Function CapitalizeFirst(text As String) As String
         If String.IsNullOrEmpty(text) Then Return text
@@ -460,6 +464,8 @@ Module Program
 
 
     Function input(text As String)
+        'By Prithiv 10E
+
         Console.Write(text)
         Return (Console.ReadLine())
     End Function
@@ -482,6 +488,7 @@ Module Program
     Sub Main()
         Console.Clear()
         Console.CursorVisible = False
+        Console.WriteLine("By Prithiv 10E")
         Dim userLoadChoice As String = input("Name/Num: ")
         Dim json As String = ""
         If Not IsNumeric(userLoadChoice) Then
